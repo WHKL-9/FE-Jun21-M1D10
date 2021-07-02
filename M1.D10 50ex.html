@@ -15,44 +15,10 @@
         9) Create a container with a nested paragraph and a nested unordered list
         10) Create a footer with some information about the page creator 
 
-        CSS EXERCISES
+     
 
-        11) Give a maximum width to the body and center it in the page
-        12) Set every h1 to be centered
-        13) Change the color of each link in the page
-        14) Create a class with a border
-        15) Set table to have rounded corners
-        16) Add margin between every paragraph
-        17) Create a class which change font size and boldness
-        18) Create a class to hide a content
-        19) Add a green border to each td
-        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+      
 
-        JS EXERCISES
-
-        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
-        22) Create an object with properties such name, surname, email
-        23) Delete Email from the previously created object
-        24) Create an array with 10 strings in it
-        25) Print in the console every string in the previous array
-        26) Create an array with 100 random numbers in it
-        27) Wrote a function to get the MAX and the MIN from the previously created array
-        28) Create an array of arrays, in which every array has 10 random numbers
-        29) Create a function that gets 2 arrays and returns the longest one
-        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-
-        DOM 
-
-        31) Get element with ID "container" from the page
-        32) Get every "td" from the page
-        33) Create a cycle that prints the text inside every td of the page
-        34) Write a function to change the heading of the page
-        35) Write a function to add an extra row to the table
-        36) Write a function to add the class "test" to each row in the table
-        37) Write a function to add a red background to every link in the page
-        38) Console log "Page loaded" when the page is correctly loaded
-        39) Write a function to add new items to a UL
-        40) Write a function to empty a list
 
         EXTRA 
 
@@ -70,6 +36,105 @@
 
 
     <head>
+        <link rel="stylesheet" href="index.css">
+        <!--1) Create a title for the page-->
+        <title>
+            A Striver's Journey
+        </title>
     </head>
-    <body></body>
+
+    <body>
+    <!--2) Create a heading-->
+        <div class="page-title">
+            <h1>Day 10</h1>
+            <button onclick="changeH1ToH2()">Make Me Smaller</button>
+        </div>
+        <!--3) Create an ordered list -->
+        <div class = "orderedList">
+            <h3>Daily Schedule of a Striver</h3>
+                <ol>
+                    <li>Morning Lecture</li>
+                    <li>Lunch Break</li>
+                    <li>Homework</li>
+                    <li>Debrief</li>
+                </ol>
+                <button onclick="emptyTheList()">Empty all list items</button>
+        </div>
+
+        <!--
+            4) Create a table with 5 columns and 4 row 
+            5) Add an image to each second cell of every row
+            6) Add a anchor link for every image
+        -->
+
+        <!-- 8) Divide the page using a horizontal line -->
+        <hr class="hr-text">
+
+        <div class="table" id="container">
+            <table class="border">
+                <tr class="tableRow">
+                    <td></td>
+                    <td><a href="https://www.tagesspiegel.de/images/heprodimagesfotos83120130714dc-10246-jpg/8493040/4-format43.jpg" target="_blank"><img src="https://www.tagesspiegel.de/images/heprodimagesfotos83120130714dc-10246-jpg/8493040/4-format43.jpg" 
+                        alt="cool skateboard picture 1" width=250px height = 250px></a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="tableRow">
+                    <td></td>
+                    <td><a href="https://media.cntraveler.com/photos/5f6231c97557491753644ec2/1:1/w_720,h_720,c_limit/Oumi_Janta_2020_@vadimphotography-2.jpg" target="_blank">
+                        <img src="https://media.cntraveler.com/photos/5f6231c97557491753644ec2/1:1/w_720,h_720,c_limit/Oumi_Janta_2020_@vadimphotography-2.jpg" 
+                        alt="Cool skateboard picture 2" width=250px height = 250px></a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="tableRow">
+                    <td></td>
+                    <td><a href = "https://pbs.twimg.com/media/EZ5NUWwWAAAuxcr.jpg" target="_blank"><img src="https://pbs.twimg.com/media/EZ5NUWwWAAAuxcr.jpg"
+                        alt = "frontend meme 1" width=250px height = 250px
+                        ></a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="tableRow">
+                    <td></td>
+                    <td><a href="https://i.redd.it/ku1neu504sh01.jpg" target="_blank"><img src="https://i.redd.it/ku1neu504sh01.jpg"
+                        alt="frontend meme 2" width=250px height = 250px ></a>
+                    </td>
+                    <td></td>
+                    <!-- 7) Merge together 2 table cells -->
+                    <td class="merged" colspan="2"></td>
+                    <!-- <td>x</td> -->
+                </tr>
+        </table>    
+        <br>  
+        </div>
+
+        <!-- 9) Create a container with a nested paragraph and a nested unordered list -->
+        <div class="p_and_ul">
+            <p>This is a paragraph</p>
+            <ul>
+                <p>This is an unordered list</p>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <input id="new-item" type="text" placeholder="Tell me what you want" />
+            <button onclick="addNewItem()">Add new item to the list</button>
+        </div>
+
+        <hr class="lineBeforeFooter">
+        <!-- 10) Create a footer with some information about the page creator  --> 
+        <footer class="pageCreaterInfo">
+            <h5>Name: Weoy Howe</h5>
+            <h5>Age: 23</h5>
+            <h5>Location: Berlin</h5>
+        </footer>
+        <script src="index.js"></script>
+    </body>
 </html>

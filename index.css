@@ -1,0 +1,83 @@
+/* CSS EXERCISES
+
+
+
+/* 11) Give a maximum width to the body and center it in the page */
+body {
+    width: 100%;
+    margin: auto; 
+    margin-left: 10px;
+}
+
+/* 12) Set every h1 to be centered */
+h1{
+    text-align: center;
+}
+
+/* 13) Change the color of each link in the page */
+a{
+    color: blue;
+}
+
+/* 15) Set table to have rounded corners */
+table{
+    border-radius: 20px;
+    margin: auto;
+    padding: 10px;
+    /* border-collapse: collapse; */
+}
+
+
+
+/* 19) Add a green border to each td */
+
+td{
+    border: 3px solid darkgreen;
+    background: linear-gradient(90deg, rgba(6,247,103,1) 0%, rgba(48,185,82,1) 50%, rgba(2,0,36,1) 100%);
+    padding: 5px 5px;
+}
+
+/* 20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) ) 
+*/ 
+
+tr{
+    /* border: 3px dotted  red;  this won't work-----------tr cannot be styled*/
+    background: rgb(6,247,103);    
+    background: linear-gradient(90deg, rgba(6,247,103,1) 0%, rgba(48,185,82,1) 50%, rgba(2,0,36,1) 100%);
+    padding: 5px 5px;
+
+}
+
+/* 
+still not working either - cannot style table row
+.tableRow{
+    border: 3px dotted  red;
+} */
+
+.merged{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(242,8,40,1) 50%, rgba(247,6,6,1) 100%);
+}
+
+/* 16) Add margin between every paragraph */
+p{
+    margin: 2px 2px; 
+    padding: 2px 2px; 
+}
+
+/* 17) Create a class which change font size and boldness */
+.biggerAndBolder{
+    font-size: large;
+    font-weight: bold;
+}
+
+/* 18) Create a class to hide a content */
+.hideMe{
+    visibility: hidden;
+}
+
+
+
+
+
+
+
