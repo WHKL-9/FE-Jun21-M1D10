@@ -21,13 +21,14 @@ delete myObject.email
 // for testing
 // console.log(myObject)
 
-// 24) Create an array with 10 strings in it
+// 24) Create an array with 10 strings in it &&
 // 25) Print in the console every string in the previous array
 const createArrayWithTenStrings = function(){
     let arrayWithTenStrings = []
     for (let i=1; i<=10; i++){
         let currentString = `I am String Number ${i}`
         arrayWithTenStrings.push(currentString)
+        //arrayWithTenStrings.push("I am string Numer" + i) one line to replace two lines above
     }
     console.log(arrayWithTenStrings) 
 }
@@ -40,12 +41,11 @@ let arrayWith100RandomNumbers = []
 
 //generate random number between 1 to 100
 const randomNumber = function(){
-    return Math.floor(Math.random()*100+1) 
+    return Math.floor(Math.random()*(100+1)) 
 }
-
-for (i=1; i<=100; i++){
-    arrayWith100RandomNumbers.push(randomNumber())
-}
+    for (i=1; i<=100; i++){
+        arrayWith100RandomNumbers.push(randomNumber())
+    }
 console.log(arrayWith100RandomNumbers)
 
 const getMaxFromArray = function(array){
@@ -58,6 +58,19 @@ const getMaxFromArray = function(array){
     console.log(maxNumber)
 }
 getMaxFromArray(arrayWith100RandomNumbers)
+
+const getMinFromArray = function(array){
+    let minNumber = array[0]
+    for (i=0;i<array.length;i++){
+        if (array[i]<array[i+1]){
+            minNumber = array[i]
+        }
+    }
+    console.log(minNumber)
+}
+getMinFromArray(arrayWith100RandomNumbers)
+
+
 // 28) Create an array of arrays, in which every array has 10 random numbers
 
 const arrayOfXArraysGenerator = function(x,y){ //x being number of "outer" arrays, y being number of elements in the "inner" array
@@ -116,19 +129,22 @@ console.log(getBiggerSum(arrayOf5Arrays[3],arrayOf2Arays[1]))
 
 // DOM 
 
-// 35) Write a function to add an extra row to the table
-// 36) Write a function to add the class "test" to each row in the table
-// 37) Write a function to add a red background to every link in the page
 
 
 // 31) Get element with ID "container" from the page
 let elementWithContainerAsId = document.getElementById("container")
 
 // 32) Get every "td" from the page
-let getThoseTd = document.querySelectorAll("td")
+let getThoseTds = document.querySelectorAll("td")
 
 // 33) Create a cycle that prints the text inside every td of the page
-//what is a cycle
+//what is a cycle -> loop 
+function getTextfromTds(){
+    const tds = getThoseTds()    
+    for (let i=0;i<tds.length;i++){
+        console.log(tds[i].innerText)
+    }
+}
 
 // 34) Write a function to change the heading of the page
 const  changeH1ToH2 = function(){
@@ -136,6 +152,22 @@ const  changeH1ToH2 = function(){
     getH1Element.outerHTML = '<h3>' + getH1Element.innerHTML + '</h3>' //use OuterHTML to change the headings 
 }
 
+// 35) Write a function to add an extra row to the table
+const addExtraRow = function(){
+    //target the tr 
+    const table = document.querySelector("table")
+    const newRow = document.createElement("tr")
+    newRow.innerText = "Testing" // for testing
+    table.appendChild(newRow)
+}
+// 36) Write a function to add the class "test" to each row in the table
+
+// 37) Write a function to add a red background to every link in the page
+const addRedBackgroundToLink = function (){
+    //target those links
+    let getAllLinks = document.getElementsByTagName("a")
+    getAllLinks.style.background = red 
+}
 
 // 39) Write a function to add new items to a UL
 const addNewItem = function(){

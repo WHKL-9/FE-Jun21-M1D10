@@ -4,9 +4,8 @@
 
 /* 11) Give a maximum width to the body and center it in the page */
 body {
-    width: 100%;
-    margin: auto; 
-    margin-left: 10px;
+    max-width: 768px;
+    margin: 0 auto; 
 }
 
 /* 12) Set every h1 to be centered */
@@ -24,7 +23,7 @@ table{
     border-radius: 20px;
     margin: auto;
     padding: 10px;
-    /* border-collapse: collapse; */
+    border-collapse: collapse;
 }
 
 
@@ -42,9 +41,9 @@ td{
 
 tr{
     /* border: 3px dotted  red;  this won't work-----------tr cannot be styled*/
-    background: rgb(6,247,103);    
     background: linear-gradient(90deg, rgba(6,247,103,1) 0%, rgba(48,185,82,1) 50%, rgba(2,0,36,1) 100%);
     padding: 5px 5px;
+    border: 2px dotted red 
 
 }
 
