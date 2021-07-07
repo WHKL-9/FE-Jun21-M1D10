@@ -206,5 +206,25 @@ const emptyTheList = function(){
     }
 }
 
+// EXTRA 
+
+// 41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+function addAlertToLinks(){
+    const links = document.querySelectorAll("a")    
+    for (let i=0;i<links.length;i++){
+        links[i].addEventListener("mouseover", function() {
+            alert(links[i].getAttribute('href'))
+        })
+    }
+}
+// 42) Add a button to hide every image on the page
+// 43) Add a button to hide and show the table from the page
+// 44) Write a function to sum every number inside the TD (if the content is numeric)
+// 45) Delete the last letter from the title each time the user clicks on it
+// 46) Change a single TD background color when the user clicks on it
+// 47) Add a button DELETE, on click it should delete a random TD from the page
+// 48) Add a pink border to a cell when the mouse is over it
+// 49) Write a function to add a table with 4 rows and 3 columns programmatically
+// 50) Write a function to remove the table from the page
 
 
